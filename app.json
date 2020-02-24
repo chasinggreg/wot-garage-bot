@@ -1,0 +1,32 @@
+{
+	"name": "WoT Garage Discord Bot",
+	"description": "Discord bot which displays WoT player profile.",
+	"repository": "https://github.com/chasinggreg/wot-garage-bot",
+	"keywords": [
+		"python",
+		"python3",
+		"discord",
+		"discord-bot",
+		"wargaming",
+		"wargaming-api", 
+		"world-of-tanks", 
+		"wot",
+		"wot-api"
+	],
+	"website": "https://chasinggreg.com/",
+	"env": {
+		"WOT_APPLICATION_ID": {
+			"description": "Required to make calls to the Wargaming API key, you can sign up for a client id here: https://developers.wargaming.net/applications/",
+			"required": true
+		},
+		"WOT_REGION": {
+			"description": "The server region you'd like to query, for example `us`, or `eu`.",
+			"value": "us",
+			"required": true
+		},
+		"DISCORD_BOT_TOKEN": {
+			"description": "The token for your Discord bot user, you can sign up for one here: https://discordapp.com/developers/docs/intro",
+			"required": true
+		}
+	}
+}
