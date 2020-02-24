@@ -1,4 +1,4 @@
-# World of Tanks Garaage Discord Bot
+# World of Tanks Garage Discord Bot
 
 [![Build Status](https://travis-ci.org/chasinggreg/wot-garage-bot.svg?branch=master)](https://travis-ci.org/chasinggreg/wot-garage-bot) [![Issues](https://img.shields.io/github/issues/chasinggreg/wot-garage-bot.svg)](https://github.com/chasinggreg/wot-garage-bot/issues)
 
