@@ -38,7 +38,7 @@ The following commands are accepted by the bot.
 ```
 
 ## FAQ :speech_balloon: 
-Here's a list of frequently asked questions. Please review the [contribution guide](https://github.com/chasinggreg/wot-garage-bot/blob/master/.github/CONTRIBUTING.md) if you'd like to support the project.
+Here's a list of frequently asked questions. Please review the [contribution guide](.github/ISSUE_TEMPLATE/CONTRIBUTING.md) if you'd like to support the project.
 ```
 Q: Can I look up players stats in multiple Regions?
 A: Yes, NA is the default region, however you can add region prefix before the player name to look up a player on another region server. (example: EU Kalfalgold)
