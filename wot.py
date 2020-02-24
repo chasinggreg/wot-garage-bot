@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import os
-from dotenv import load_dotenv
 import discord
-from discord.ext import commands, tasks
 import asyncio
 import re
 import json
+from discord.ext import commands, tasks
+from settings import *
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
