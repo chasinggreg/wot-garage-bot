@@ -1,1 +1,1 @@
-worker: python3 app.py start
+worker: python3 wot.py start
