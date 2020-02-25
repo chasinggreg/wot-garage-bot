@@ -12,7 +12,7 @@ from settings import *
 # Prefix Settings for initial and ability to change it
 bot = commands.Bot(command_prefix='.', case_insensitive=True)
 
-def get_prefix(bot, message):
+async def get_prefix(bot, message):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
         
@@ -50,10 +50,29 @@ async def changeprefix(ctx, prefix):
     
     await ctx.send(f'Prefix changed to: {prefix}')
 
+
 # Bot Connection to Discord
 @bot.event
 async def on_ready():
-    print('Bot is ready.')
+    if DISCORD_TOKEN is None or DISCORD_TOKEN == "":
+        print("Missing Discord bot token. Please refer to https://github.com/chasinggreg/wot-garage-bot#configuration for more details")
+        quit()
+        
+    if WOT_API_ID is None or WOT_API_ID == "":
+        print("Missing World of Tanks Application ID. Please refer to https://github.com/chasinggreg/wot-garage-bot#configuration for more details") 
+        quit()
+
+    if WOT_REGION is None or WOT_REGION == "":
+        print("Missing World of Tanks region. Please refer to https://github.com/chasinggreg/wot-garage-bot#configuration for more details") 
+        quit()
+
+    if LOCALE is None or LOCALE == "":
+        print("Missing locale. Please refer to https://github.com/chasinggreg/wot-garage-bot#configuration for more details") 
+        quit()
+        
+    else:
+        print("Launch Succesful! The bot is now listening for commands...")
+
     return await bot.change_presence(status=discord.Status.idle, activity=discord.Game('.help'))
 
 
@@ -122,37 +141,4 @@ async def unban(ctx, *, member):
             await ctx.send(f'Unbanned {user.mention}')
             return
     
-@bot.event
-async def on_ready():
-    if (
-        WOT_APPLICATION_ID is None
-        or WOT_APPLICATION_ID == ""
-    ):
-        print(
-            "Missing World of Tanks Application ID. Please refer to https://github.com/chasinggreg/wot-garage-bot#configuration for more details"
-        )
-        quit()
-
-    if WOT_REGION is None or WOT_REGION == "":
-        print(
-            "Missing World of Tanks region. Please refer to https://github.com/chasinggreg/wot-garage-bot#configuration for more details"
-        )
-        quit()
-
-    if LOCALE is None or LOCALE == "":
-        print(
-            "Missing locale. Please refer to https://github.com/chasinggreg/wot-garage-bot#configuration for more details"
-        )
-        quit()
-
-    else:
-        print("Launch Succesful! The bot is now listening for commands...")
-
-
-if DISCORD_BOT_TOKEN is None or DISCORD_BOT_TOKEN == "":
-    print(
-        "Missing Discord bot token. Please refer to https://github.com/chasinggreg/wot-garage-bot#configuration for more details"
-    )
-    quit()
-    
-bot.run(DISCORD_BOT_TOKEN)
+bot.run(DISCORD_TOKEN)
