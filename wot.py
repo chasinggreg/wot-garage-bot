@@ -8,9 +8,6 @@ import json
 from discord.ext import commands, tasks
 from settings import *
 
-load_dotenv()
-token = os.getenv('DISCORD_TOKEN')
-
 
 # Prefix Settings for initial and ability to change it
 bot = commands.Bot(command_prefix='.', case_insensitive=True)
