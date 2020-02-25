@@ -5,12 +5,12 @@ import os
 """Application settings such as API keys are stored here."""
 
 # World of Tanks API Settings
-WOT_APPLICATION_ID = str(os.environ.get("WOT_APPLICATION_ID"))
-WOT_REGION = str(os.environ.get("WOT_REGION"))
-LOCALE = str(os.environ.get("LOCALE"))
+WOT_API_ID = str(os.environ.get('WOW_API_ID'))
+WOT_REGION = str(os.environ.get('WOW_REGION'))
+LOCALE = str(os.environ.get('LOCALE'))
 
 # Discord API Settings
-DISCORD_BOT_TOKEN = str(os.environ.get("DISCORD_BOT_TOKEN"))
+DISCORD_TOKEN = str(os.environ.get('DISCORD_BOT_TOKEN'))
 
 # API Connection Errors
 NOT_FOUND_ERROR = "Could not find a character with that name. \
