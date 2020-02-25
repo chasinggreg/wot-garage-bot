@@ -123,4 +123,4 @@ async def unban(ctx, *, member):
             return
     
 
-bot.run(token)
+bot.run(DISCORD_BOT_TOKEN)
