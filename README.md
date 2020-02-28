@@ -34,7 +34,7 @@ The following commands are accepted by the bot.
 
 ```
 # Command list/help
-!garage help
+.garage help
 ```
 
 ## FAQ :speech_balloon: 
