@@ -90,7 +90,7 @@ async def on_member_remove(member):
 async def info(ctx):
     info = discord.Embed(
         title = 'Bot Info',
-        description = 'This is a description',
+        description = 'World of Tanks bot for Discord which checks a tankers profile, clan, notable achievements, and tanks and posts it in the chat.',
         colour = discord.Colour.blurple()
     )
     
